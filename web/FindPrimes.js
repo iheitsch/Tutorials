@@ -48,8 +48,8 @@ function circle( whatInt ) {
                 } 
                 var allPrimes = doc.getElementsByClassName("prime");
                 var len = allPrimes.length;
-                var lastPrime = 2;
-                for( var j = 1; j < len; ++j ) {
+                var lastPrime = 1; // initiallize with bogus number
+                for( var j = 0; j < len; ++j ) {
                     if( allPrimes[j].getAttribute("circled") === "false" ) {
                         break;
                     }
@@ -57,15 +57,21 @@ function circle( whatInt ) {
                     var sz = id.length;
                     lastPrime = Num(id.substring(1,sz));
                 }
+                //alert("lastPrime is " + lastPrime);
                 doc.getElementById("msg0").innerHTML = 
                     "All multiples of " + whatInt + " are greater than 100."; 
                 doc.getElementById("msg1").innerHTML =
                     "There is nothing to cross off.";
+                if( lastPrime > 1 ) {
                 doc.getElementById("msg2").innerHTML = 
                     "Click the first number greater than " + lastPrime + " that is not crossed off.";
                 doc.getElementById("msg3").innerHTML =
                     "That is the next prime number.";
-                              
+                } else {
+                    doc.getElementById("msg2").innerHTML = "";
+                    doc.getElementById("msg3").innerHTML = 
+                            "Click on the smallest prime: 2";
+                }                             
             } else {
                 doc.getElementById("msg0").innerHTML = 
                     "Click on all the multiples of " + whatInt + "."; 
@@ -146,8 +152,8 @@ function slash( ev ) {
             }
             var allPrimes = doc.getElementsByClassName("prime");
             var len = allPrimes.length;
-            var lastPrime = 2;
-            for( var j = 1; j < len; ++j ) {
+            var lastPrime = 1; // initiallize with a bogus number
+            for( var j = 0; j < len; ++j ) {
                 if( allPrimes[j].getAttribute("circled") === "false" ) {
                     break;
                 }
@@ -155,10 +161,17 @@ function slash( ev ) {
                 var sz = id.length;
                 lastPrime = Num(id.substring(1,sz));
             }
-            doc.getElementById("msg0").innerHTML = 
-                "Click the first number greater than " + lastPrime + " that is not crossed off.";
-            doc.getElementById("msg1").innerHTML =
-                "That is the next prime number.";
+            //alert("lastPrime is " + lastPrime);
+            if( lastPrime > 1 ) {
+                doc.getElementById("msg0").innerHTML = 
+                    "Click the first number greater than " + lastPrime + " that is not crossed off.";
+                doc.getElementById("msg1").innerHTML =
+                    "That is the next prime number.";
+            } else {
+                doc.getElementById("msg0").innerHTML = 
+                            "Click on the smallest prime: 2";
+                doc.getElementById("msg1").innerHTML = "";
+            }
             doc.getElementById("msg2").innerHTML =
                 "";  
             doc.getElementById("msg3").innerHTML =
