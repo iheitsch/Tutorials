@@ -16,9 +16,6 @@
     </head>
     <body onresize="resize()" id="body">
         
-        <table>
-        <tr>
-        
 <% 
         final boolean debug = false;
         final int MAXINT = 101;
@@ -74,14 +71,14 @@
             int idx = (numPrimes - 1)%15;
             whatAngle = angles[idx]; %>
             <span>
-            <canvas id="<%=cid%>" class="prime" circled="false" 
-                    onclick="circle( <%=i%> )" red="155" green="255" blue="0" 
-                    angle="<%=whatAngle%>" color="<%=whatColor%>">
+            <canvas id="<%=cid%>" class="prime" data-circled="false" 
+                    onclick="circle( <%=i%> )" 
+                    data-angle="<%=whatAngle%>" data-color="<%=whatColor%>">
             </canvas>
             </span>
 <%      } else { %>
             <span>
-            <canvas id="<%=cid%>" class="mult" struck="false">
+            <canvas id="<%=cid%>" class="mult" data-struck="false">
             </canvas>
             </span>
         <% } 

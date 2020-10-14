@@ -22,12 +22,12 @@ function circle( whatInt ) {
     var maxint = MAXINT;
     if( lookingforPrime === true ) {
         var whatCanvas = doc.getElementById("c" + whatInt );
-        if( whatCanvas.getAttribute("circled") === "false" ) {
+        if( whatCanvas.getAttribute("data-circled") === "false" ) {
             // clear all the canvases
             window.onload();
-            var whatColor = whatCanvas.getAttribute("color");
+            var whatColor = whatCanvas.getAttribute("data-color");
             drawCircle( whatCanvas, whatColor );
-            whatCanvas.setAttribute("circled", "true");
+            whatCanvas.setAttribute("data-circled", "true");
             whichPrime = whatInt;
             numMults = Math.floor(maxint/whatInt) - 1;
             numStrokes = 0;
@@ -50,7 +50,7 @@ function circle( whatInt ) {
                 var len = allPrimes.length;
                 var lastPrime = 1; // initiallize with bogus number
                 for( var j = 0; j < len; ++j ) {
-                    if( allPrimes[j].getAttribute("circled") === "false" ) {
+                    if( allPrimes[j].getAttribute("data-circled") === "false" ) {
                         break;
                     }
                     var id = allPrimes[j].id;
@@ -112,14 +112,14 @@ function slash( ev ) {
     var id = whatCanvas.id;
     var len = id.length;
     var whatInt = Num(whatCanvas.id.substring(1,len));
-    var struck = doc.getElementById(id).getAttribute("struck");
+    var struck = doc.getElementById(id).getAttribute("data-struck");
     var midX = 2*whatCanvas.offsetWidth;
     var midY = 2*whatCanvas.offsetHeight;
     if( whatInt%whatPrime === 0 && struck === "false" ) {
-        whatCanvas.setAttribute( "struck", "true" );
+        whatCanvas.setAttribute( "data-struck", "true" );
         var origPrimeCanvas = doc.getElementById("c" + whatPrime );
-        var color = origPrimeCanvas.getAttribute("color");
-        var angle = Num(origPrimeCanvas.getAttribute("angle"));
+        var color = origPrimeCanvas.getAttribute("data-color");
+        var angle = Num(origPrimeCanvas.getAttribute("data-angle"));
         angle = Mat.PI*angle/180;
         var deltaX = Mat.cos(angle);
         var deltaY = Mat.sin(angle);
@@ -134,7 +134,7 @@ function slash( ev ) {
             var allMults = doc.getElementsByClassName("mult");
             var len = allMults.length;
             for( var i = 0; i < len; ++i ) {
-                allMults[i].setAttribute("struck","false");
+                allMults[i].setAttribute("data-struck","false");
             }
             reDrawAll();
             primesFound = primesFound + 1;
@@ -154,7 +154,7 @@ function slash( ev ) {
             var len = allPrimes.length;
             var lastPrime = 1; // initiallize with a bogus number
             for( var j = 0; j < len; ++j ) {
-                if( allPrimes[j].getAttribute("circled") === "false" ) {
+                if( allPrimes[j].getAttribute("data-circled") === "false" ) {
                     break;
                 }
                 var id = allPrimes[j].id;
@@ -200,14 +200,14 @@ function reDrawAll() {
     var len = allPrimes.length;    
     for( var k = 0; k < len; ++k ) {
         var whichCanvas = allPrimes[k];
-        if( whichCanvas.getAttribute("circled") === "true" ) {
-            var color = whichCanvas.getAttribute("color");
+        if( whichCanvas.getAttribute("data-circled") === "true" ) {
+            var color = whichCanvas.getAttribute("data-color");
             drawCircle( whichCanvas, color );
             var id = whichCanvas.id;      
             var idLen = id.length;
             var whatPrime = Num(id.substring(1,idLen));
             //alert("redrawing " + whatPrime + " and all it's multiples");
-            var angle = Num(whichCanvas.getAttribute("angle"));
+            var angle = Num(whichCanvas.getAttribute("data-angle"));
             angle = Mat.PI*angle/180;
             var deltaX = Mat.cos(angle);
             var deltaY = Mat.sin(angle);
