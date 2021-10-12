@@ -1,0 +1,37 @@
+@charset "UTF-8";
+table{
+	text-align: center;
+	border: 1px solid;
+	border-collapse: collapse;
+}
+td, th{
+	border: 1px solid;
+}
+.bd{
+	font-weight: bold;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.nb{
+	border: none;
+}
+.rt{
+	text-align: right;
+}
+.verticalTableHeader {
+    text-align:center;
+    white-space:nowrap;
+    transform-origin:50% 50%;
+    transform: rotate(-90deg);
+
+}
+.verticalTableHeader:before {
+    content:'';
+    padding-top:110%;
+    display:inline-block;
+    vertical-align:middle;
+}
