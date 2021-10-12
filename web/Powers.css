@@ -24,3 +24,6 @@ span.fracp > sup, span.fracp > sub {
 }
 span.fracp > sup {border-bottom: 0.08em solid;}
 span.fracp > span {display: none;}
+.fr{
+	float: right;
+}

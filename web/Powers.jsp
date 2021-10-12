@@ -10,7 +10,8 @@
 <body>
 When you raise a number to a power, you are multiplying that number by itself
 <br>Multiply four twos together, and you have two to the fourth power, written 2<sup>4</sup> = 2 &times 2 &times 2 &times 2 = 16
-<br>Three to the second power, also called "3 squared", is written 3<sup>2</sup> = 3 &times 3 = 9
+<br><img src="images/mimeinacube.png" alt="mime in a cube" class="fr" style="width:195px;height:195px;margin-right:15px;">
+Three to the second power, also called "3 squared", is written 3<sup>2</sup> = 3 &times 3 = 9
 <br>Five to the third power, also called "5 cubed", is written 5<sup>3</sup> = 5 &times 5 &times 5 = 125
 <br>
 <br>Can you raise a number to a negative power? Yes you can. 
