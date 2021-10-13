@@ -28,13 +28,13 @@ go through this mess:
 	<td></td>			<td>M</td>	 <td>CM</td>	<td>LX</td>		<td>IX</td>		<td></td>	<td></td>		<td class="rt">(1000) + (1000 - 100) + (50 + 10) + (10 - 1) = 1000 + 900 + 60 + 9 = 1969</td>
 </tr>
 <tr>
-<td class="bd">-</td>	<td>M</td> 	<td>CM</td>		<td></td>		<td></td>		<td></td>	<td>III</td>	<td class="rt">(1000) + (1000 - 100) + (3) = 1000 + 900 + 3 = 1903</td>
+<th class="ub" >-</th>	<td class="ub">M</td> 	<td class="ub">CM</td>		<td class="ub"></td>		<td class="ub"></td>		<td class="ub"></td>	<td class="ub">III</td>	<td class="rt">(1000) + (1000 - 100) + (3) = 1000 + 900 + 3 = 1903</td>
 </tr>
 <tr>
-	<td></td>			<td></td> 	 <td></td>		<td>LX</td>		<td>IX</td>		<td></td>	<td>-III</td>	<td>Not right, no one said you could have negative numbers</td>
+	<td></td>			<td></td> 	 <td></td>		<td class="xo" >LX</td>		<td class="xo" >IX</td>		<td></td>	<td class="xo" >-III</td>	<td>Not right, no one said you could have negative numbers</td>
 </tr>
 <tr>
-	<td></td>			<td></td> 	 <td></td>		<td>LX</td>		<td>IIIIX</td>	<td></td>	<td></td>		<td>Not right, you can't subtract 4 I's from X</td>
+	<td></td>			<td></td> 	 <td></td>		<td class="xo" >LX</td>		<td class="xo" >IIIIX</td>	<td></td>	<td></td>		<td>Not right, you can't subtract 4 I's from X</td>
 </tr>
 <tr>
 	<td></td>			<td></td> 	 <td></td>		<td>LX</td>		<td></td>		<td>VI</td>	<td></td>		<td class="rt">(50 + 10) + (5+1) = 60 + 6 = 66</td>
@@ -48,92 +48,120 @@ There are no zeros to hold the place in a numbers such as MCMIII (1903) that don
 The Arabic base 10 numbers we use are much more compact and easier to work with
 <table>
 <tr>
-	<th colspan="3" class="verticalTableHeader">10<sup>3</sup></th>
-	<th colspan="3" class="verticalTableHeader">10<sup>2</sup></th>
-	<th colspan="3" class="verticalTableHeader">10<sup>1</sup></th>
-	<th colspan="3" class="verticalTableHeader">10<sup>0</sup></th>
-	<th colspan="4" class="verticalTableHeader"></th>
+	<th colspan="4">10<sup>3</sup></th>
+	<th colspan="3">10<sup>2</sup></th>
+	<th colspan="3">10<sup>1</sup></th>
+	<th colspan="3">10<sup>0</sup></th>
+	<th colspan="8"></th>
 </tr>
 <tr>
-	<th colspan="3">1</th>
+	<th colspan="4">1</th>
 	<th colspan="3">9</th>
 	<th colspan="3">6</th>
 	<th colspan="3">9</th>
+	<th colspan="8"></th>
+</tr>
+<tr>
+	<td class="nb"></td>
+	<td class="nb">1</td><td class="nb">&times</td><td class="nb">1000</td>
+	<th colspan="3"></th>
+	<th colspan="3"></th>
+	<th colspan="3"></th>
+	<td>=</td>
+	<td class="rt" >1000</td><th colspan="6"></th>
+</tr>
+<tr>
 	<th colspan="4"></th>
+	<td class="nb">9</td><td class="nb">&times</td><td class="nb">100</td>
+	<th colspan="3"></th>
+	<th colspan="3"></th>
+	<td>=</td>
+	<td></td><td class="rt" >900</td><th colspan="5"></th>
 </tr>
 <tr>
-	<td>1</td><td>&times</td><td>1000</td>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td class="rt" >1000</td><td></td><td></td><td></td>
+	<th colspan="4"></th>
+	<th colspan="3"></th>
+	<td class="nb">6</td><td class="nb">&times</td><td class="nb">10</td>
+	<th colspan="3"></th>
+	<td>=</td>
+	<td></td><td></td><th class="rt" >60</th><th colspan="4"></th>
 </tr>
 <tr>
-	<td></td><td></td><td></td>
-	<td>9</td><td>&times</td><td>100</td>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td></td><td class="rt" >900</td><td></td><td></td>
+	<th colspan="4"></th>
+	<th colspan="3"></th>
+	<th colspan="3"></th>
+	<td class="nb">9</td><td class="nb">&times</td><td class="nb">1</td>
+	<td>=</td>
+	<td></td><td></td><td></td><th colspan="2" class="rt" >9</th><th colspan="2"></th>
 </tr>
 <tr>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td>6</td><td>&times</td><td>10</td>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td class="rt" >60</td><td></td>
-</tr>
-<tr>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td>9</td><td>&times</td><td>1</td>
-	<td></td><td></td><td></td><td class="rt" >9</td>
-</tr>
-<tr>
+	<th>-</th>
 	<th colspan="3">1</th>
 	<th colspan="3">9</th>
 	<th colspan="3">0</th>
 	<th colspan="3">3</th>
-	<th colspan="4"></th>
+	<td></td><td></td><td></td><td></td>
+	<th colspan="2"></th>
+	<th colspan="2"></th>
 </tr>
 <tr>
-	<td>1</td><td>&times</td><td>1000</td>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td class="rt" >-1000</td><td></td><td></td><td></td>
+	<th>-</th>
+	<td class="nb">1</td><td class="nb">&times</td><td class="nb">1000</td>
+	<th colspan="3"></th>
+	<th colspan="3"></th>
+	<th colspan="3"></th>
+	<td>=</td>
+	<td class="rt ub" >-1000</td>
+	<td></td><td></td>
+	<th colspan="2"></th>
+	<th colspan="2"></th>
 </tr>
 <tr>
-	<td></td><td></td><td></td>
-	<td>9</td><td>&times</td><td>100</td>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td></td><td class="rt" >-900</td><td></td><td></td>
+	<th>-</th>
+	<th colspan="3"></th>
+	<td class="nb">9</td><td class="nb">&times</td><td class="nb">100</td>
+	<th colspan="3"></th>
+	<th colspan="3"></th>
+	<td>=</td>
+	<td></td><td class="rt ub" >-900</td>
+	<td></td>
+	<th colspan="2"></th>
+	<th colspan="2"></th>
 </tr>
 <tr>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td>0</td><td>&times</td><td>10</td>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td class="rt" >-0</td><td></td>
+	<th>-</th>
+	<th colspan="3"></th>
+	<th colspan="3"></th>
+	<td class="nb">0</td><td class="nb">&times</td><td class="nb">10</td>
+	<th colspan="3"></th>
+	<td>=</td>
+	<th colspan="2"></th><th class="rt ub" >-0</th>
+	<th colspan="2"></th>
+	<th colspan="2"></th>
 </tr>
 <tr>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td></td><td></td><td></td>
-	<td>3</td><td>&times</td><td>1</td>
-	<td></td><td></td><td></td><td class="rt" >-3</td>
+	<th>-</th>
+	<th colspan="3"></th>
+	<th colspan="3"></th>
+	<th colspan="3"></th>
+	<td class="nb">3</td><td class="nb">&times</td><td class="nb">1</td>
+	<td>=</td>
+	<th colspan="3"></th><th colspan="2" class="rt ub" >-3</th><th colspan="2"></th>
 </tr>
 <tr>
-	<th colspan="12">Difference</th><td class="nb"></td><td class="nb"></td><td class="nb">6</td><td class="nb">6</td>
+	<th colspan="13">Difference</th>
+	<td class="nb"></td>
+	<td class="nb"></td><td class="nb"></td><td class="nb">60</td><td class="nb">+</td><td class="nb">6</td><td class="nb">=</td><td class="nb">66</td>
 </tr>
 </table>
 <h3>Other bases</h3>
-<p><img src="images/polydactylcat.png" alt="6toedcat" class="fl" style="width:170px;height:195px;margin:15px;">Suppose we were polydactyl, like some cats, and had 12 fingers. Chances are, we would count to eleven
+<p><img src="images/polydactylcat.png" alt="6toedcat" class="fl" style="width:170px;height:195px;margin:15px;">
+Suppose we were polydactyl, like some cats, and had 12 fingers. Chances are, we would count to eleven
 and then carry the 1 when we got to twelve. It might make some math easier. For example, try the 
 <a href="FindPrimes.jsp">What is a Prime Number?</a> tutorial with the window resized for 12 columns
 rather than 10. But we've already learned to count on our ten fingers and learned to do our arithmetic
-in base 10 and it would be very difficult to switch over. So what is the use of other number systems?
+in base 10. Our language itself has words that reflect a base 10 number system: "fourteen" and "thirty-seven"
+It would be very difficult to switch to another number base. So what is the use of other number systems?
 <h4 id="binary">Base 2 or Binary</h4>
 Most computers only work with 1's and 0's. There are "Analog" computers that work with 
 a continuous range of numbers, but they are tricky to program and hard to keep accurate. So the computers
@@ -141,7 +169,8 @@ that most of us use are "Digital" computers that only work with 1's and 0's. The
 multiply and do all their math in "binary", also called "base 2". The following table lists some 
 numbers in decimal or base 10 and in binary or base 2. In binary, each digit is called a binary digit,
 or "bit" for short. In base 10, every digit represented a multiple of a power of 10, in base 2, every bit
-represents a power of 2.
+represents a power of 2. Sometimes numbers are written with a subscript to emphasize what kind
+of representation is being used. One hundred ten base 10 = 110<sub>10</sub> = 1101110<sub>2</sub>
 
 <table>
 <tr>
@@ -258,13 +287,14 @@ is tedious. Converting from base 16 to base 2 and from base 2 to base 16 is pret
 practice can be done very quickly. An address in base 16 also better represents how the hardware or software 
 is organized. 
 <p><img src="images/longbusride.png" alt="singing 256 Bottles Of Beer" class="fr" style="width:300px;height:300px;margin-right:15px;">What is base 16?  Each digit represents a power of 16. When you count to 9, you do not carry a 1 for the 
-next number, you keep going until you get to 15, then carry a 1 to make 16. We don't have numerals bigger 
+next number, you keep going until you get to fifteen, then carry a 1 to make sixteen. We don't have numerals bigger 
 than 9, so people use letters "A", "B", "C", "D", "E" and "F" to represent in base 16 or "hexadecimal" the 
 numbers that in base 10 are represented by "10", "11", "12", "13", "14" and "15". Each 4 bits of a binary 
 number represent a hexadecimal digit. All the places you carry a 1 in hex, you also carry a 1 in binary so 
 it makes converting hex to binary and back  again much easier than converting binary to base 10 and back. 
 Hexadecimal numbers are usually written with a "0x" prefix so, for example, that you don't confuse 
-"0x100" with 100 base 10. The table below shows the previous table with hex number representations included. 
+"0x100" with 100 base 10. As mentioned before, sometimes a subscript is used to specify what type of
+representation is being used. Ninety-nine base 10 = 99<sub>10</sub> = 63<sub>16</sub>. The table below shows the previous table with hex number representations included. 
 Note that Hex numbers with the least significant digit "B" correspond to binary numbers with the 4 least 
 significant bits "1011".
  <table>

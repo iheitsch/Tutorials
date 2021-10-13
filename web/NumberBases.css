@@ -7,9 +7,6 @@ table{
 td, th{
 	border: 1px solid;
 }
-.bd{
-	font-weight: bold;
-}
 .fl{
 	float: left;
 }
@@ -21,6 +18,9 @@ td, th{
 }
 .rt{
 	text-align: right;
+}
+.ub{
+	border-bottom: 3px solid black;
 }
 .verticalTableHeader {
     text-align:center;
@@ -34,4 +34,7 @@ td, th{
     padding-top:110%;
     display:inline-block;
     vertical-align:middle;
+}
+.xo{
+	text-decoration: line-through double red;
 }
